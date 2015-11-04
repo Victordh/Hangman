@@ -3,6 +3,21 @@
 
     <string name="app_name">Hangman</string>
     <string name="action_settings">Settings</string>
+    <string name="hangman6">6 chances left</string>
+    <string name="hangman5">5 chances left</string>
+    <string name="hangman4">4 chances left</string>
+    <string name="hangman3">3 chances left</string>
+    <string name="hangman2">2 chances left</string>
+    <string name="hangman1">1 chances left</string>
+    <string name="hangman0">0 chances left</string>
+    <string name="the_word">H a n g m a n</string>
+    <string name="guess_button">Guess!</string>
+    <string name="new_word_button">New word</string>
+    <string name="guess_input_hint">Enter a letter</string>
+    <string name="guesses_left">You have 6 guesses left!</string>
+    <string name="letters_tried_text">You already tried the following letters:</string>
+    <string name="letters_tried"></string>
+
 
     <string-array name="words">
 <item>the</item>
