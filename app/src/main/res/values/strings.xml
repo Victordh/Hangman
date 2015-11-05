@@ -14,11 +14,13 @@
     <string name="guess_button">Guess!</string>
     <string name="new_word_button">New word</string>
     <string name="guess_input_hint">Enter a letter</string>
-    <string name="guesses_left">You have 6 guesses left!</string>
+    <string name="guesses_left">You have 6 wrong guesses left!</string>
     <string name="letters_tried_text">You already tried the following letters:</string>
     <string name="letters_tried"></string>
     <string name="toast_win">You did it, congratulations!</string>
     <string name="toast_loss">Uh oh, try again!</string>
+    <string name="guesses_welcome">Welcome to Hangman!</string>
+    <string name="letters_tried_text_welcome">Try to guess the word with less than 6 mistakes.</string>
 
 
     <string-array name="words">

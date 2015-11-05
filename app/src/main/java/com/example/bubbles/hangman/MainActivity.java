@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView hangman6, hangman5, hangman4, hangman3, hangman2, hangman1, hangman0;
     private TextView the_word, guesses_left, letters_tried_text, letters_tried;
-    private Button new_word_button, guess_button;
+    private Button guess_button;
     private EditText guess_input;
-    private String check_for_letter, picked_word, questionmarks;
+    private String picked_word, questionmarks, the_word_was;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         initialise();
         hide();
+        guesses_left.setText(R.string.guesses_welcome);
+        letters_tried_text.setText(R.string.letters_tried_text_welcome);
 
     }
 
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         letters_tried_text = (TextView) findViewById(R.id.letters_tried_text);
         letters_tried = (TextView) findViewById(R.id.letters_tried);
 
-        new_word_button = (Button) findViewById(R.id.new_word_button);
+        Button new_word_button = (Button) findViewById(R.id.new_word_button);
         guess_button = (Button) findViewById(R.id.guess_button);
 
         guess_input = (EditText) findViewById(R.id.guess_input);
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         the_word.setText(R.string.the_word);
         guesses_left.setText(R.string.guesses_left);
         letters_tried.setText(R.string.letters_tried);
+        letters_tried_text.setText(R.string.letters_tried_text);
         guess_input.setText("");
         guess_button.setVisibility(View.VISIBLE);
         hangman6.setVisibility(View.VISIBLE);
@@ -84,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         Integer random_number = new Random().nextInt(getResources().getStringArray(R.array.words).length);
         String[] array = getResources().getStringArray(R.array.words);
         picked_word = array[random_number];
-        letters_tried_text.setText(picked_word);
+        the_word_was = picked_word;
 
         // changes textSize according to length of the_word
         if(picked_word.length() > 11) {
@@ -118,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 
             // checks if the character is a letter
             if (first_letter.matches("[a-z]+")) {
-                check_for_letter = letters_tried.getText().toString();
+                String check_for_letter = letters_tried.getText().toString();
 
                 // checks with already tried letters
                 if (!check_for_letter.contains(first_letter)) {
@@ -137,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
                             char[] picked_word_chars = picked_word.toCharArray();
                             picked_word_chars[location] = '?';
                             picked_word = String.valueOf(picked_word_chars);
-                            letters_tried_text.setText(picked_word);
 
                             // check if the entire word has been revealed
                             if(picked_word.matches("[?]+")) {
@@ -150,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
                     else {
                         Integer amount = Integer.parseInt(guesses_left.getText().toString().substring(9, 10));
                         amount -= 1;
-                        guesses_left.setText("You have " + amount + " guesses left!");
+                        guesses_left.setText("You have " + amount + " wrong guesses left!");
                         switch (amount) {
                             case 5:
                                 hangman6.setVisibility(View.INVISIBLE);
@@ -176,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
                                 hangman1.setVisibility(View.INVISIBLE);
                                 hangman0.setVisibility(View.VISIBLE);
                                 guess_button.setVisibility(View.INVISIBLE);
-                                Toast.makeText(getApplicationContext(), R.string.toast_loss, Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "Uh oh, try again!\n" + "The word was " + the_word_was, Toast.LENGTH_LONG).show();
                                 break;
                         }
                     }

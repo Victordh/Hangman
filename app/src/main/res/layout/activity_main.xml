@@ -119,7 +119,7 @@
 
     <TextView
         android:id="@+id/guesses_left"
-        android:text="@string/guesses_left"
+        android:text="@string/guesses_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/guess_button"
@@ -128,7 +128,7 @@
 
     <TextView
         android:id="@+id/letters_tried_text"
-        android:text="@string/letters_tried_text"
+        android:text="@string/letters_tried_text_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/guesses_left"
