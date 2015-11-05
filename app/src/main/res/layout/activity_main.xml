@@ -13,8 +13,8 @@
         android:id="@+id/hangman6"
         android:src="@drawable/hangman6"
         android:contentDescription="@string/hangman6"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/hangman"
+        android:layout_height="@dimen/hangman"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -22,8 +22,8 @@
         android:id="@+id/hangman5"
         android:src="@drawable/hangman5"
         android:contentDescription="@string/hangman5"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/hangman"
+        android:layout_height="@dimen/hangman"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -31,8 +31,8 @@
         android:id="@+id/hangman4"
         android:src="@drawable/hangman4"
         android:contentDescription="@string/hangman4"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/hangman"
+        android:layout_height="@dimen/hangman"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -40,8 +40,8 @@
         android:id="@+id/hangman3"
         android:src="@drawable/hangman3"
         android:contentDescription="@string/hangman3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/hangman"
+        android:layout_height="@dimen/hangman"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -49,8 +49,8 @@
         android:id="@+id/hangman2"
         android:src="@drawable/hangman2"
         android:contentDescription="@string/hangman2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/hangman"
+        android:layout_height="@dimen/hangman"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -58,8 +58,8 @@
         android:id="@+id/hangman1"
         android:src="@drawable/hangman1"
         android:contentDescription="@string/hangman1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/hangman"
+        android:layout_height="@dimen/hangman"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -67,8 +67,8 @@
         android:id="@+id/hangman0"
         android:src="@drawable/hangman0"
         android:contentDescription="@string/hangman0"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/hangman"
+        android:layout_height="@dimen/hangman"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -79,7 +79,7 @@
         android:textSize="48sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/hangman6"
+        android:layout_alignBottom="@id/hangman6"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="20dp"/>
@@ -91,7 +91,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/hangman6"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="new_word_button_click" />
 
     <Button
         android:id="@+id/guess_button"
@@ -100,7 +101,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/hangman6"
         android:layout_toLeftOf="@+id/new_word_button"
-        android:layout_toStartOf="@+id/new_word_button" />
+        android:layout_toStartOf="@+id/new_word_button"
+        android:onClick="guess_button_click" />
 
     <EditText
         android:id="@+id/guess_input"
@@ -111,7 +113,9 @@
         android:layout_toLeftOf="@+id/guess_button"
         android:layout_toStartOf="@+id/guess_button"
         android:layout_marginRight="10dp"
-        android:layout_marginEnd="10dp" />
+        android:layout_marginEnd="10dp"
+        android:maxLength="1"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/guesses_left"
