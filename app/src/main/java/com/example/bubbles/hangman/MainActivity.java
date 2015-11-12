@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -144,7 +145,10 @@ public class MainActivity extends AppCompatActivity {
                             // check if the entire word has been revealed
                             if(picked_word.matches("[?]+")) {
                                 guess_button.setVisibility(View.INVISIBLE);
-                                Toast.makeText(getApplicationContext(), R.string.toast_win, Toast.LENGTH_LONG).show();
+                                Toast win_toast = Toast.makeText(getApplicationContext(), R.string.toast_win, Toast.LENGTH_LONG);
+                                win_toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, 0);
+                                win_toast.show();
+
                             }
                         }
                     }
@@ -178,7 +182,9 @@ public class MainActivity extends AppCompatActivity {
                                 hangman1.setVisibility(View.INVISIBLE);
                                 hangman0.setVisibility(View.VISIBLE);
                                 guess_button.setVisibility(View.INVISIBLE);
-                                Toast.makeText(getApplicationContext(), "Uh oh, try again!\n" + "The word was " + the_word_was, Toast.LENGTH_LONG).show();
+                                Toast loss_toast = Toast.makeText(getApplicationContext(), "Uh oh, try again!\n" + "The word was " + the_word_was, Toast.LENGTH_LONG);
+                                loss_toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL, 0, 0);
+                                loss_toast.show();
                                 break;
                         }
                     }
