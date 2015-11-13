@@ -21,6 +21,19 @@
     <string name="toast_loss">Uh oh, try again!</string>
     <string name="guesses_welcome">Welcome to Hangman!</string>
     <string name="letters_tried_text_welcome">Try to guess the word with less than 6 mistakes.</string>
+    <string name="back_to_menu_button">Back to menu</string>
+    <string name="menu_normal_title">Hangman</string>
+    <string name="menu_evil_title">Evil Hangman</string>
+    <string name="new_game_button">New Game</string>
+    <string name="instructions_button">Instructions</string>
+    <string name="settings_button">Settings</string>
+    <string name="high_scores_button">High scores</string>
+    <string name="high_scores_title">High scores</string>
+    <string name="instructions_title">Instructions</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_evil_mode_text">Evil Mode?</string>
+    <string name="settings_evil_mode_checkbox_off">Evil mode is now OFF</string>
+    <string name="settings_evil_mode_checkbox_on">Evil mode is now ON</string>
 
 
     <string-array name="words">

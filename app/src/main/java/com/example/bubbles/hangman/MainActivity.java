@@ -1,7 +1,10 @@
 package com.example.bubbles.hangman;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -20,10 +23,15 @@ public class MainActivity extends Activity {
     private EditText guess_input;
     private String picked_word, questionmarks, the_word_was;
 
+//    public static final String PREFERENCES_FILE_NAME = "settings";
+//    SharedPreferences settings = getSharedPreferences(PREFERENCES_FILE_NAME,0);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        PreferenceManager.setDefaultValues(this, R.xml.settings, false);
 
         initialise();
         hide();
@@ -189,5 +197,9 @@ public class MainActivity extends Activity {
         guess_input.setText("");
     }
 
-    // if there's no more ?s in the word show message (toast) and remove guess_button
+    public void back_to_menu_button_click(View view) {
+        Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+        startActivity(intent);
+    }
+
 }

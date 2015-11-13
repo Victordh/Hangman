@@ -146,4 +146,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"/>
 
+    <Button
+        android:id="@+id/switch_screen_button"
+        android:text="@string/back_to_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="back_to_menu_button_click" />
+
 </RelativeLayout>
