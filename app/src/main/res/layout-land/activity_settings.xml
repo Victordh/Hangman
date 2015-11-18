@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.bubbles.hangman.SettingsActivity">
+
+    <TextView
+        android:id="@+id/menu_title"
+        android:text="@string/settings_title"
+        android:textSize="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/switch_screen_button"
+        android:text="@string/back_to_menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="back_to_menu_button_click" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu_title"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp" >
+
+        <LinearLayout
+            android:id="@+id/evil_mode_text_container"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/evil_mode_text"
+                android:text="@string/settings_evil_mode_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/evil_mode_checkbox"
+            android:text="@string/settings_evil_mode_checkbox_off"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:onClick="evil_mode_checkbox_click" />
+
+    </LinearLayout>
+
+</RelativeLayout>

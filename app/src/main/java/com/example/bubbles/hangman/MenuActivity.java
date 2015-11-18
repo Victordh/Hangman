@@ -28,7 +28,7 @@ public class MenuActivity extends Activity {
         }
         else {
             menu_title.setText(R.string.menu_normal_title);
-            menu_title.setTextColor(Color.BLACK);
+            menu_title.setTextColor(Color.GRAY);
         }
     }
 
