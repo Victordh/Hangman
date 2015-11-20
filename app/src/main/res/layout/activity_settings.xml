@@ -11,7 +11,7 @@
     tools:context="com.example.bubbles.hangman.SettingsActivity">
 
     <TextView
-        android:id="@+id/menu_title"
+        android:id="@+id/settings_title"
         android:text="@string/settings_title"
         android:textSize="50sp"
         android:layout_width="wrap_content"

@@ -11,7 +11,7 @@
     tools:context="com.example.bubbles.hangman.InstructionsActivity">
 
     <TextView
-        android:id="@+id/menu_title"
+        android:id="@+id/instructions_title"
         android:text="@string/instructions_title"
         android:textSize="50sp"
         android:layout_width="wrap_content"
